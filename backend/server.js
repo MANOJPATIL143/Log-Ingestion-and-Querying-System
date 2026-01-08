@@ -28,7 +28,7 @@ app.use(express.json());
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://log-ingestion-and-querying-system.netlify.app",
     methods: ["GET", "POST"],
     credentials: true,
   },
