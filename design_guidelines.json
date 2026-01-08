@@ -1,0 +1,115 @@
+{
+  "identity": {
+    "name": "E1",
+    "role": "testing",
+    "mission": "Create a 'Dark Console' log viewer that feels like a sci-fi control room, not a spreadsheet."
+  },
+  "typography": {
+    "fonts": {
+      "headings": "Chivo, sans-serif",
+      "body": "IBM Plex Sans, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "usage": {
+      "h1": "font-heading font-bold text-3xl tracking-tight text-foreground",
+      "h2": "font-heading font-semibold text-xl tracking-tight text-foreground/90",
+      "body": "font-body text-sm text-muted-foreground leading-relaxed",
+      "log_entry": "font-mono text-xs leading-5 tracking-wide",
+      "label": "font-mono text-[10px] uppercase tracking-widest text-muted-foreground/70"
+    },
+    "installation": "Import fonts via Google Fonts in index.html or CSS: Chivo (400,700), IBM Plex Sans (400,500,600), JetBrains Mono (400,500)."
+  },
+  "colors": {
+    "palette_name": "Dark Console",
+    "mode": "dark",
+    "backgrounds": {
+      "app_bg": "#09090B",
+      "panel_bg": "#121214",
+      "surface_bg": "#18181B",
+      "glass_bg": "rgba(24, 24, 27, 0.6)"
+    },
+    "accents": {
+      "primary": "#EDEDED",
+      "secondary": "#A1A1AA",
+      "border": "#27272A",
+      "highlight": "#3F3F46"
+    },
+    "log_levels": {
+      "error": "#F87171",
+      "warn": "#FBBF24",
+      "info": "#60A5FA",
+      "debug": "#A78BFA",
+      "success": "#34D399"
+    },
+    "gradients": {
+      "subtle_glow": "radial-gradient(circle at top center, rgba(56, 189, 248, 0.15), transparent 40%)"
+    }
+  },
+  "layout": {
+    "grid_system": "Control Room Grid",
+    "structure": {
+      "main_container": "h-screen w-full bg-background text-foreground flex flex-col overflow-hidden",
+      "header": "h-14 border-b border-border/40 bg-background/80 backdrop-blur-md flex items-center px-6 justify-between z-50",
+      "content_area": "flex-1 flex overflow-hidden",
+      "sidebar": "w-64 border-r border-border/40 bg-card/30 hidden md:flex flex-col p-4 gap-4",
+      "log_stream": "flex-1 overflow-auto p-0 relative scrollbar-hide"
+    },
+    "spacing": {
+      "container_padding": "p-6",
+      "item_gap": "gap-4",
+      "dense_gap": "gap-2"
+    }
+  },
+  "components": {
+    "log_table": {
+      "style": "dense",
+      "row": "group flex items-start gap-3 py-1.5 px-4 hover:bg-white/[0.02] border-b border-border/20 transition-colors cursor-pointer",
+      "timestamp": "font-mono text-muted-foreground w-32 shrink-0",
+      "level_badge": "font-mono font-bold w-16 shrink-0 uppercase text-[10px] tracking-wider",
+      "message": "font-mono text-foreground/90 break-all line-clamp-2 group-hover:line-clamp-none transition-all",
+      "metadata": "hidden group-hover:flex gap-2 ml-auto opacity-60 text-[10px]"
+    },
+    "filter_bar": {
+      "container": "sticky top-0 z-40 bg-background/95 backdrop-blur border-b border-border/40 p-3 flex flex-wrap gap-3 items-center shadow-sm",
+      "input": "bg-secondary/20 border-border/50 focus:border-primary/50 focus:ring-0 h-8 text-xs font-mono w-64 transition-all hover:bg-secondary/30",
+      "select": "h-8 text-xs font-mono bg-secondary/20 border-border/50"
+    },
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 h-8 px-4 text-xs font-medium rounded-md shadow-[0_0_10px_rgba(255,255,255,0.1)] transition-all active:scale-95",
+      "ghost": "hover:bg-secondary/50 text-muted-foreground hover:text-foreground h-8 w-8 p-0 rounded-md"
+    },
+    "cards": {
+      "stat_card": "bg-card/40 border border-border/40 p-4 rounded-lg backdrop-blur-sm hover:border-primary/20 transition-colors"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": "backdrop-blur-xl bg-black/40 border border-white/10 shadow-2xl",
+    "neon_borders": "border border-transparent hover:border-primary/30 shadow-[0_0_15px_rgba(0,0,0,0.5)]",
+    "scanlines": "pointer-events-none fixed inset-0 z-[100] bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.1)_50%),linear-gradient(90deg,rgba(255,0,0,0.03),rgba(0,255,0,0.01),rgba(0,0,255,0.03))] bg-[length:100%_2px,3px_100%] opacity-20"
+  },
+  "assets": {
+    "images": [
+      {
+        "category": "background",
+        "url": "https://images.unsplash.com/photo-1762279389006-43963a0cee55?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMHRlY2hub2xvZ3klMjBkYXRhJTIwZmxvdyUyMGRhcmslMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc2Nzg0OTg4NHww&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract neon lines on dark background, use for empty states or login screen background with overlay."
+      }
+    ],
+    "icons": "Use 'lucide-react' for all UI icons (Search, Filter, Calendar, AlertCircle, Info, CheckCircle, XCircle, ChevronDown, RefreshCw)."
+  },
+  "instructions_to_main_agent": {
+    "step_1": "Install fonts: Chivo, IBM Plex Sans, JetBrains Mono.",
+    "step_2": "Update tailwind.config.js to extend the color palette with the 'Dark Console' colors defined above.",
+    "step_3": "Create a 'LogEntry' component that strictly follows the 'log_table' styles. Ensure the 'level_badge' dynamically changes color based on the log level.",
+    "step_4": "Implement the 'FilterBar' as a sticky header. Use Shadcn 'Popover' for complex filters like Date Range.",
+    "step_5": "Apply the 'scanlines' class to the main container for a subtle retro-tech feel (optional, but recommended for E1 style).",
+    "step_6": "Ensure all interactive elements have 'data-testid' attributes."
+  },
+  "universal_guidelines": {
+    "theme": "Force DARK MODE. This is a developer tool.",
+    "density": "High. Avoid excessive padding in the log list. Use 'py-1' or 'py-1.5' for rows.",
+    "contrast": "Ensure text is readable. Use 'text-foreground' for primary info and 'text-muted-foreground' for timestamps/metadata.",
+    "animations": "Micro-interactions only. Hover states on rows should be instant or very fast (75ms).",
+    "empty_states": "Use the provided abstract image with a glassmorphism overlay for 'No logs found' or 'Welcome' screens."
+  }
+}

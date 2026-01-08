@@ -1,0 +1,75 @@
+.App {
+  min-height: 100vh;
+  background-color: #09090B;
+}
+
+/* Gradient overlay for background */
+.gradient-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40vh;
+  background: radial-gradient(circle at top center, rgba(56, 189, 248, 0.15), transparent 40%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Smooth transitions */
+.log-entry-transition {
+  transition: background-color 75ms ease-in-out, border-color 75ms ease-in-out;
+}
+
+/* Level badge styles */
+.level-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.level-error {
+  background-color: rgba(248, 113, 113, 0.15);
+  color: #F87171;
+  border: 1px solid rgba(248, 113, 113, 0.3);
+}
+
+.level-warn {
+  background-color: rgba(251, 191, 36, 0.15);
+  color: #FBBF24;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.level-info {
+  background-color: rgba(96, 165, 250, 0.15);
+  color: #60A5FA;
+  border: 1px solid rgba(96, 165, 250, 0.3);
+}
+
+.level-debug {
+  background-color: rgba(167, 139, 250, 0.15);
+  color: #A78BFA;
+  border: 1px solid rgba(167, 139, 250, 0.3);
+}
+
+/* Glass effect for filter bar */
+.glass-panel {
+  background: rgba(24, 24, 27, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Empty state styling */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  opacity: 0.6;
+}
