@@ -6,7 +6,7 @@ import { useToast } from "./hooks/use-toast";
 import { io } from "socket.io-client";
 
 // WebSocket server URL
-const SOCKET_URL = "http://localhost:5000";
+const SOCKET_URL = "https://log-ingestion-and-querying-system.onrender.com";
 
 function App() {
   const [logs, setLogs] = useState([]);
